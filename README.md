@@ -10,7 +10,7 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Project Setup and install all the dependecies 
 
 ```sh
 npm install
@@ -27,3 +27,16 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### The global styles are located in main.css file 
+
+### All operation that interacts with the movie db api is located in a class in the folder Utils/MovieDb.js
+
+### All the components are stored components folder
+
+### All the views are in the views folder
+
+### The authentication proccess is proccessed using localStorage
+
+
+
