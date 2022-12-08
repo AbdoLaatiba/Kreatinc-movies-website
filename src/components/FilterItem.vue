@@ -2,7 +2,8 @@
     <div>
         <h4>{{ title }}</h4>
         <select ref="select" @change="$emit('valueChange', $event.target.value)">
-            <option v-for="item in items" :key="item.id" :value="item.id">{{item.name}}</option>
+            <option value="" selected>----------------</option>
+            <option v-for="item in items" :key="item.id" :value="item.id" :selected="($route.query.genre == item.id || $route.query.language == item.id || $route.query.rating == item.id) ? true : false">{{item.name}}</option>
         </select>
     </div>
 </template>

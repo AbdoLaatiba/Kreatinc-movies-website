@@ -1,14 +1,28 @@
 <script setup></script>
 
 <template>
-    <div class="search-wraper">
+    <div class="search-wraper ">
         <h4>Search</h4>
-        <input type="text" class="input" placeholder="search movies...">
+        <input type="text" class="input" placeholder="search movies..." v-model="query"  @keyup.enter="handleSubmit">
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    data(){
+        return {
+            query: this.$route.query.q ?? '',
+        }
+    },
+    methods: {
+        handleSubmit(event) {
+      this.$emit('handle-submit', event.target.value);
+    },
+    created(){
+        this.query = this.$route.query.q;
+    }
+  },
+}
 </script>
 
 <style scoped>
